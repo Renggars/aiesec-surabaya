@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpenMore, setIsOpenMore] = useState(false);
 
   return (
-    <header className="w-full sm:py-5 py-3 sm:px-10 px-5 flex justify-between items-center border border-b-1 border-gray-300 sm:h-28 ">
+    <header className="w-full sm:py-5 py-3 sm:px-10 px-5 flex justify-between items-center border border-b-1 border-gray-300 sm:h-28 h-16 fixed z-40 bg-white top-0">
       <nav className="flex w-full relative">
         {/* logo desktop */}
         <Link href={"/"} className="ml-5 cursor-pointer max-sm:hidden">

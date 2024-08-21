@@ -4,8 +4,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex bg-gray-900 p-10 mt-10">
-      <div className="grid grid-cols-3 gap-10 px-28">
+    <div className="flex bg-gray-900 p-8 sm:p-12 mt-10 sm:mt-20">
+      <div className="sm:grid sm:grid-cols-3 sm:gap-10 sm:px-28">
         {/* aisec logo */}
         <div>
           <div>
@@ -17,7 +17,7 @@ const Footer = () => {
             />
           </div>
           <div className="flex">
-            <div className="h-72 w-3 bg-white ml-3 mt-6"></div>
+            <div className="h-72 sm:h-64 w-3 bg-white ml-3 mt-6"></div>
             <div className="ml-3">
               <p className="mt-5 text-white">
                 AIESEC is a non-governmental not-for-profit organization in
@@ -35,23 +35,40 @@ const Footer = () => {
           </div>
         </div>
         {/* journey */}
-        <div className="ml-24">
-          <div className="text-2xl text-primary">Our Journey</div>
-          <div className="ml-5 text-lg  text-white">Categories</div>
-          <div className="flex flex-col text-white ml-10">
-            <Link href={"#"}>AIESEC Jouerney</Link>
-            <Link href={"#"}>Career Tips</Link>
-            <Link href={"#"}>Exchange Stories</Link>
-            <Link href={"#"}>Leadership</Link>
-            <Link href={"#"}>MC Stories</Link>
-            <Link href={"#"}>Press Release</Link>
-            <Link href={"#"}>Youth</Link>
+        <div className="max-sm:mt-8 max-sm:ml-2 sm:ml-24 sm:mt-3">
+          <div className="text-xl text-primary font-semibold">Our Journey</div>
+          <div className="ml-5 mt-2 text-lg text-white hover:text-primary">
+            Categories
+          </div>
+          <div className="flex flex-col gap-2 text-white ml-10 mt-2">
+            <Link href={"#"} className="hover:text-primary">
+              AIESEC Jouerney
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              Career Tips
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              Exchange Stories
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              Leadership
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              MC Stories
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              Press Release
+            </Link>
+            <Link href={"#"} className="hover:text-primary">
+              Youth
+            </Link>
           </div>
         </div>
         {/*sosial Media and office map */}
-        <div className="">
-          <div className="text-xl text-primary">Sosial Media</div>
-          <div className="flex items-center  mt-5 text-white">
+        <div className="max-sm:mt-8 sm:mt-3">
+          {/* sosial media */}
+          <div className="text-xl font-semibold text-primary">Sosial Media</div>
+          <div className="flex justify-items-start gap-4 items-center mt-5 text-white">
             <Link
               href="https://www.facebook.com/ngga.rengga.75?mibextid=LQQJ4D"
               target="_blank"
@@ -121,10 +138,11 @@ const Footer = () => {
               </svg>
             </Link>
           </div>
-          <div className="text-2xl text-primary mt-10">
+          {/* map */}
+          <div className="text-xl sm:text-2xl text-primary font-semibold mt-10">
             AIESEC Surabaya Office
           </div>
-          <div className="h-20 w-36 bg-gray-200 mt-4"></div>
+          <div className="h-20 w-36 bg-gray-200 my-10"></div>
         </div>
       </div>
     </div>
