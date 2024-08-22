@@ -29,6 +29,17 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleScroll = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    id: string
+  ) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <header
@@ -48,17 +59,21 @@ const Navbar = () => {
           </Link>
 
           {/* nav links dekstop */}
-          <div className="flex flex-1 max-sm:hidden items-center justify-end mr-20">
+          <div className="flex flex-1 max-sm:hidden items-center justify-end mr-20 sm:scroll-pt-28">
             {navLinks.map((link: navLinks) => (
-              <Link
+              <a
                 key={link.href}
-                className="text-gray hover:text-primary px-5 transition-all"
-                href={link.href}
+                className="text-gray hover:text-primary px-5 transition-all cursor-pointer"
+                href={link.href} // Masih menyertakan href untuk SEO
+                onClick={(e) => handleScroll(e, link.href.slice(1))} // Menggunakan slice(1) untuk menghapus '#' dari href
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
-            <div className="hover:text-primary transition-all cursor-pointer">
+            <div
+              className="hover:text-primary transition-all cursor-pointer"
+              onClick={() => setIsOpenMore(!isOpenMore)}
+            >
               More
             </div>
           </div>
@@ -100,13 +115,14 @@ const Navbar = () => {
         </div>
         <div className="flex flex-col mt-3 cursor-pointer">
           {navLinks.map((link: navLinks) => (
-            <Link
+            <a
               key={link.href}
               className="text-gray-200 hover:text-primary py-3 px-7 transition-all font-semibold mb-1"
-              href={link.href}
+              href={link.href} // Masih menyertakan href untuk SEO
+              onClick={(e) => handleScroll(e, link.href.slice(1))} // Menggunakan slice(1) untuk menghapus '#' dari href
             >
               {link.label}
-            </Link>
+            </a>
           ))}
           <div
             className="flex justify-between items-center grouhover:text-blue-400 hover:border-y hover:border-gray-600 group"

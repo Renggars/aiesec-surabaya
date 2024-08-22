@@ -17,8 +17,8 @@ const Footer = () => {
             />
           </div>
           <div className="flex">
-            <div className="h-auto sm:h-64 w-3 bg-white ml-2 mt-6"></div>
-            <div className="ml-3 text-sm">
+            <div className="h-auto w-3 bg-white ml-2 mt-6"></div>
+            <div className="ml-3 text-sm sm:text-base">
               <p className="mt-5 text-white leading-relaxed">
                 AIESEC is a non-governmental not-for-profit organization in
                 consultative status with the United Nations Economic and Social
@@ -37,8 +37,10 @@ const Footer = () => {
 
         {/* journey */}
         <div className="max-sm:mt-8 max-sm:ml-2 sm:ml-24 sm:mt-3">
-          <div className="text-lg text-primary font-bold">Our Journey</div>
-          <div className="ml-5 mt-2 text-base font-semibold text-white hover:text-primary">
+          <div className="text-lg sm:text-xl text-primary font-bold">
+            Our Journey
+          </div>
+          <div className="ml-5 mt-2 text-base sm:text-lg font-semibold text-white">
             Categories
           </div>
           <div className="flex flex-col gap-2 text-white ml-10 mt-2">
@@ -68,8 +70,10 @@ const Footer = () => {
         {/*sosial Media and office map */}
         <div className="max-sm:mt-8 sm:mt-3">
           {/* sosial media */}
-          <div className="text-lg font-bold text-primary">Sosial Media</div>
-          <div className="flex justify-items-start gap-4 items-center mt-5 text-white">
+          <div className="text-lg sm:text-xl font-bold text-primary">
+            Sosial Media
+          </div>
+          <div className="flex justify-items-start gap-4 items-center mt-3 sm:mt-5 text-white">
             <Link
               href="https://www.facebook.com/ngga.rengga.75?mibextid=LQQJ4D"
               target="_blank"
@@ -140,10 +144,20 @@ const Footer = () => {
             </Link>
           </div>
           {/* map */}
-          <div className="text-lg font-bold sm:text-2xl text-primary mt-10">
+          <div className="text-lg font-bold sm:text-xl text-primary mt-10">
             AIESEC Surabaya Office
           </div>
-          <div className="h-20 w-36 bg-gray-200 my-10"></div>
+          <div className="h-44 w-full bg-gray-200 mt-3 my-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.802079153403!2d112.76775459999999!3d-7.263351899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbac00b357f3%3A0xea1a2603c133b751!2sAIESEC%20Surabaya%20Office!5e0!3m2!1sid!2sid!4v1724330455386!5m2!1sid!2sid"
+              style={{ border: 0 }}
+              width={"100%"}
+              height={"100%"}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </div>

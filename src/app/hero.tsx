@@ -38,8 +38,8 @@ const Hero = () => {
       </div>
 
       {/* Our Programs */}
-      <div id="programs" className="block mt-10">
-        <div className="text-4xl sm:text-5xl font-bold text-center">
+      <div id="programs" className="mt-10 sm:mt-20">
+        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
           Programs
         </div>
         <p className="text-lg max-sm:px-5 sm:text-2xl text-gray-700 mt-5 text-center">
@@ -122,12 +122,15 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* our event */}
-      <div id="events" className="flex justify-center max-sm:flex-col sm:mt-20">
-        <div className="text-3xl font-semibold text-center sm:text-3xl mt-9 sm:w-[50%] text-gray-600">
-          Our Events
+      {/* event */}
+      <div
+        id="events"
+        className="flex justify-center max-sm:flex-col mt-10 sm:mt-20"
+      >
+        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center sm:w-[50%]">
+          Events
         </div>
-        <div className="flex justify-center mt-10 max-sm:px-5 sm:grid sm:grid-cols-2 sm:gap-5 sm:px-56 sm:w-[50%]">
+        <div className="flex justify-center max-sm:mt-5 max-sm:px-5 sm:grid sm:grid-cols-2 sm:gap-5 sm:px-56 sm:w-[50%]">
           {/* <div className="bg-blue-500 flex justify-center items-center">
             <Image
               src={"/impactCircle.webp"}
@@ -149,7 +152,9 @@ const Hero = () => {
 
       {/* blog */}
       <div id="blog" className="mt-20">
-        <div className="text-3xl font-semibold text-center mt-9">Blog</div>
+        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center mt-9">
+          Blog
+        </div>
         <div className="flex justify-center mt-10">
           <Image src={"/blog.webp"} alt="blog" width={1200} height={500} />
         </div>
@@ -161,10 +166,10 @@ const Hero = () => {
         className="flex max-sm:flex-col mt-14 sm:justify-center sm:gap-10 sm:mt-20 sm:px-44"
       >
         <div className="sm:w-1/2 px-8">
-          <div className="text-3xl font-semibold text-center">
+          <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
             Partner With Us?
           </div>
-          <div className="mx-auto h-[2px] sm:h-1 w-48 bg-primary mt-2 mb-5" />
+          <div className="mx-auto h-[2px] sm:h-1 w-48 bg-primary mt-2 mb-7" />
           <p>
             AIESEC is a global platform for young people to explore and develop
             their leadership potential. We are a non-political, independent,
@@ -173,7 +178,7 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="sm:w-1/2 mt-10">
+        <div className="sm:w-1/2 mt-6">
           <form
             action="https://getform.io/f/zazkpxob"
             method="POST"
@@ -209,7 +214,7 @@ const Hero = () => {
                   className="w-full bg-slate-200 text-slate-700 p-2 rounded-md focus:outline-none focus:ring-green-main focus:ring-1 focus:border-green-main"
                 ></input>
               </div>
-              <div className="w-full px-8 mb-6">
+              <div className="w-full px-8 mb-4">
                 <label
                   htmlFor="message"
                   className="text-base font-bold text-green-main"
@@ -236,7 +241,7 @@ const Hero = () => {
       {/* partner list */}
       <div className="sm:mt-20 mt-14 px-8">
         <div className="text-3xl font-semibold text-center mt-10">
-          Out Partners
+          Our Partners
         </div>
         <div className="grid grid-cols-5 sm:grid-cols-7 gap-3 sm:gap-2 mt-10 sm:px-44 justify-center items-center">
           <Image src={"/goto.png"} alt="goto" width={100} height={100} />
