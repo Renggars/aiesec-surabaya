@@ -19,12 +19,12 @@ const Hero = () => {
             Welcome to AIESEC Surabaya
           </p>
         </div>
-        <div className="absolute font-sans sm:top-2/4 top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full">
-          <p className="text-[#1d2129] font-bold sm:text-6xl text-5xl text-center sm:mt-5">
+        <div className="absolute font-sans sm:top-[45%] top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full">
+          <p className="text-[#1d2129] font-bold sm:text-7xl text-5xl text-center sm:mt-5">
             Leadership <br /> is for <br /> every young person
           </p>
         </div>
-        <div className="absolute font-sans sm:top-2/3 top-[72%] left-1/2 -translate-x-1/2 -translate-y-1/2  justify-center items-center">
+        <div className="absolute font-sans sm:top-[70%] top-[72%] left-1/2 -translate-x-1/2 -translate-y-1/2  justify-center items-center">
           <p className="text-gray-700 font-bold sm:text-xl text-lg text-center mt-3">
             <span className="max-sm:hidden">
               Take part in one of our programs in the city of Surabaya.

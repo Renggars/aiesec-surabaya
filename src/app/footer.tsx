@@ -6,26 +6,26 @@ const Footer = () => {
   return (
     <div className="flex bg-gray-900 p-8 sm:p-12 mt-10 sm:mt-20">
       <div className="sm:grid sm:grid-cols-3 sm:gap-10 sm:px-28">
-        {/* aisec logo */}
+        {/* aisec logo & description */}
         <div>
           <div>
             <Image
               src={"/aiesecblue.webp"}
               alt="logo"
-              width={400}
-              height={400}
+              width={250}
+              height={4000}
             />
           </div>
           <div className="flex">
-            <div className="h-72 sm:h-64 w-3 bg-white ml-3 mt-6"></div>
-            <div className="ml-3">
-              <p className="mt-5 text-white">
+            <div className="h-auto sm:h-64 w-3 bg-white ml-2 mt-6"></div>
+            <div className="ml-3 text-sm">
+              <p className="mt-5 text-white leading-relaxed">
                 AIESEC is a non-governmental not-for-profit organization in
                 consultative status with the United Nations Economic and Social
                 Council (ECOSOC), affiliated with the UN DPI, member of ICMYO,
                 and is recognize by UNESCO.
               </p>
-              <p className="mt-5 text-white">
+              <p className="mt-5 text-white leading-relaxed">
                 AIESEC International Inc. is registered as a Not-for-profit
                 Organization under the Canadian Not-for-profit Corporations
                 Act-2018-02-08, Corporation Number 1055154-and Quebec Business
@@ -34,10 +34,11 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
         {/* journey */}
         <div className="max-sm:mt-8 max-sm:ml-2 sm:ml-24 sm:mt-3">
-          <div className="text-xl text-primary font-semibold">Our Journey</div>
-          <div className="ml-5 mt-2 text-lg text-white hover:text-primary">
+          <div className="text-lg text-primary font-bold">Our Journey</div>
+          <div className="ml-5 mt-2 text-base font-semibold text-white hover:text-primary">
             Categories
           </div>
           <div className="flex flex-col gap-2 text-white ml-10 mt-2">
@@ -67,7 +68,7 @@ const Footer = () => {
         {/*sosial Media and office map */}
         <div className="max-sm:mt-8 sm:mt-3">
           {/* sosial media */}
-          <div className="text-xl font-semibold text-primary">Sosial Media</div>
+          <div className="text-lg font-bold text-primary">Sosial Media</div>
           <div className="flex justify-items-start gap-4 items-center mt-5 text-white">
             <Link
               href="https://www.facebook.com/ngga.rengga.75?mibextid=LQQJ4D"
@@ -139,7 +140,7 @@ const Footer = () => {
             </Link>
           </div>
           {/* map */}
-          <div className="text-xl sm:text-2xl text-primary font-semibold mt-10">
+          <div className="text-lg font-bold sm:text-2xl text-primary mt-10">
             AIESEC Surabaya Office
           </div>
           <div className="h-20 w-36 bg-gray-200 my-10"></div>
