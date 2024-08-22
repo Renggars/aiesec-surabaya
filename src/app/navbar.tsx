@@ -120,16 +120,30 @@ const Navbar = () => {
           {/* More Content */}
           {isOpenMore && (
             <div className="flex flex-col px-10 gap-5 text-gray-200 transition-all text-xl mt-5">
-              <Link href={"/alumni"} className="hover:text-primary">
+              <Link
+                href={"https://aiesec.or.id/alumni/"}
+                className="hover:text-primary"
+              >
                 Alumni
               </Link>
-              <Link href={"/board"} className="hover:text-primary">
+              <Link
+                href={
+                  "https://aiesec.or.id/board-of-advisors-and-supervisory-group/"
+                }
+                className="hover:text-primary"
+              >
                 BoA and SG
               </Link>
-              <Link href={"/national-board"} className="hover:text-primary">
+              <Link
+                href={"https://aiesec.or.id/nationalboard/"}
+                className="hover:text-primary"
+              >
                 National Board
               </Link>
-              <Link href={"/partners"} className="hover:text-primary">
+              <Link
+                href={"https://aiesec.or.id/partners/"}
+                className="hover:text-primary"
+              >
                 Partners
               </Link>
             </div>
