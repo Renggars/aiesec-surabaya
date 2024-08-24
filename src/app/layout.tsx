@@ -20,7 +20,7 @@ export default function RootLayout({
     AOS.init({
       duration: 600, // Durasi animasi
       easing: "ease-in-out", // Gaya easing
-      once: false, // Apakah animasi hanya terjadi sekali
+      once: true, // Apakah animasi hanya terjadi sekali
     });
   }, []);
 
