@@ -75,7 +75,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-items-start gap-4 items-center mt-3 sm:mt-5 text-white">
             <Link
-              href="https://www.facebook.com/ngga.rengga.75?mibextid=LQQJ4D"
+              href="https://www.facebook.com/share/KsHtEPHV9sinkfAS/?mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-[#1877F2] border bg-white hover:opacity-80"
@@ -92,7 +92,7 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://www.instagram.com/rengga.rs"
+              href="https://www.instagram.com/aiesecsurabaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-white bg-gradient-to-r from-purple-600 to-red-500 hover:opacity-80"
@@ -109,7 +109,7 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://x.com/renggarendi"
+              href="https://x.com/aiesecindonesia"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-white bg-black hover:opacity-80"
@@ -126,7 +126,7 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://youtube.com/@renggars?si=GQvlFfwyYc_EZaZU"
+              href="www.youtube.com/@TheAIESECSurabaya"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-[#FF0000] bg-white hover:opacity-80"
