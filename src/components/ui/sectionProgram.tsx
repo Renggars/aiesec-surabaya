@@ -100,7 +100,8 @@ const Section = () => {
                 {internasionalImageList.map((list, index) => (
                   <div
                     key={index}
-                    className={`flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm ${list.bgColor}`}
+                    className="flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm "
+                    style={{ background: list.bgColor }}
                   >
                     <Image
                       src={list.src}
@@ -215,7 +216,8 @@ const Section = () => {
             {eventImageList.map((list, index) => (
               <div
                 key={index}
-                className={`flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm ${list.bgColor}`}
+                className="flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm "
+                style={{ background: list.bgColor }}
               >
                 <Image src={list.src} alt={list.alt} width={400} height={400} />
               </div>

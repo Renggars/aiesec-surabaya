@@ -58,22 +58,22 @@ export const internasionalImageList: internasionalImageList[] = [
   {
     src: "/programsImage/internasionalProgram/globalTalent.png",
     alt: "global-talent",
-    bgColor: "bg-[#0cb9c1]",
+    bgColor: "#0cb9c1",
   },
   {
     src: "/programsImage/internasionalProgram/globalTeacher.png",
     alt: "global-teacher",
-    bgColor: "bg-[#f48924]",
+    bgColor: "#f48924",
   },
   {
     src: "/programsImage/internasionalProgram/aiesecMember.webp",
     alt: "global-teacher",
-    bgColor: "bg-[#037ef3]",
+    bgColor: "#037ef3",
   },
   {
     src: "/programsImage/internasionalProgram/globalVolunteer.png",
     alt: "global-teacher",
-    bgColor: "bg-[#f85a40]",
+    bgColor: "#f85a40",
   },
 ];
 
@@ -111,11 +111,11 @@ export const eventImageList: eventImageList[] = [
   {
     src: "/programsImage/events/impactCircle.webp",
     alt: "impact-circle",
-    bgColor: "bg-[#037ef3]",
+    bgColor: "#037ef3",
   },
   {
     src: "/programsImage/events/youthToday.webp",
     alt: "youth-today",
-    bgColor: "bg-[#f29702]",
+    bgColor: "#f29702",
   },
 ];
