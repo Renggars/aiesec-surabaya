@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { Fragment } from "react";
+import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen border">
+    <div className="relative w-full h-screen border border-red-500">
       <div className="absolute w-full h-full opacity-30">
         <Image
           src={"/blog.webp"}

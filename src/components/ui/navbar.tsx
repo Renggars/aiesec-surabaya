@@ -1,5 +1,5 @@
 "use client";
-import { navLinks } from "@/data/navLinks";
+import { navLinks } from "@/data/ListData";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
