@@ -16,13 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    AOS.init({
-      duration: 600, // Durasi animasi
-      easing: "ease-in-out", // Gaya easing
-      once: true, // Apakah animasi hanya terjadi sekali
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 600, // Durasi animasi
+  //     easing: "ease-in-out", // Gaya easing
+  //     once: true, // Apakah animasi hanya terjadi sekali
+  //   });
+  // }, []);
 
   return (
     <html lang="en">

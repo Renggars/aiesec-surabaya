@@ -196,17 +196,17 @@ const Section = () => {
       </div>
 
       {/* event */}
-      <div className="flex justify-center items-center flex-col mt-10 sm:mt-20">
+      <div
+        id="events"
+        className="flex justify-center items-center flex-col mt-10 sm:mt-20"
+      >
         {/* left */}
         <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
           Events
         </div>
 
         {/* right */}
-        <div
-          id="events"
-          className="realative flex justify-center mt-5 sm:mt-10 sm:w-[50%] h-[350px] sm:h-[500px] overflow-hidden"
-        >
+        <div className="realative flex justify-center mt-5 sm:mt-10 sm:w-[50%] h-[350px] sm:h-[500px] overflow-hidden">
           <div
             className="flex w-[80%] gap-5 sm:gap-10 transition-transform duration-500 ease-in-out"
             style={{
