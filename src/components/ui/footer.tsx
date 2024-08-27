@@ -37,32 +37,32 @@ const Footer = () => {
 
         {/* journey */}
         <div className="max-sm:mt-8 max-sm:ml-2 sm:ml-24 sm:mt-3">
-          <div className="text-lg sm:text-xl text-primary font-bold">
+          <div className="text-lg text color sm:text-xl text-primaryColor font-bold">
             Our Journey
           </div>
           <div className="ml-5 mt-2 text-base sm:text-lg font-semibold text-white">
             Categories
           </div>
           <div className="flex flex-col gap-2 text-white ml-10 mt-2">
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               AIESEC Jouerney
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               Career Tips
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               Exchange Stories
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               Leadership
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               MC Stories
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               Press Release
             </Link>
-            <Link href={"#"} className="hover:text-primary">
+            <Link href={"#"} className="hover:text-primaryColor">
               Youth
             </Link>
           </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         {/*sosial Media and office map */}
         <div className="max-sm:mt-8 sm:mt-3">
           {/* sosial media */}
-          <div className="text-lg sm:text-xl font-bold text-primary">
+          <div className="text-lg sm:text-xl font-bold text-primaryColor">
             Sosial Media
           </div>
           <div className="flex justify-items-start gap-4 items-center mt-3 sm:mt-5 text-white">
@@ -144,7 +144,7 @@ const Footer = () => {
             </Link>
           </div>
           {/* map */}
-          <div className="text-lg font-bold sm:text-xl text-primary mt-10">
+          <div className="text-lg font-bold sm:text-xl text-primaryColor mt-10">
             AIESEC Surabaya Office
           </div>
           <div className="h-44 w-full bg-gray-200 mt-3 my-5">

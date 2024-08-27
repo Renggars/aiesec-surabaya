@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -9,41 +9,20 @@ import {
   internasionalImageList,
   localImageList,
 } from "@/data/ListData";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const Section = () => {
-  const [currentIndexInternasional, setCurrentIndexInternasional] =
-    useState<number>(0);
-  const [currentIndexLocal, setCurrentIndexLocal] = useState<number>(0);
-  const [currentIndexEvents, setCurrentIndexEvents] = useState<number>(0);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const nextSlide = (setState: any, image: any) => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setState((prevIndex: any) =>
-          prevIndex === image.length - 1 ? 0 : prevIndex + 1
-        );
-        setIsAnimating(false);
-      }, 500); // Durasi animasi
-    }
-  };
-
-  const prevSlide = (setState: any, image: any) => {
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setState((prevIndex: any) =>
-          prevIndex === 0 ? image.length - 1 : prevIndex - 1
-        );
-        setIsAnimating(false);
-      }, 500); // Durasi animasi
-    }
-  };
   useEffect(() => {
     AOS.init();
 
-    const element = document.getElementById("events");
+    const element = document.getElementById("event-aos");
 
     const updateAnimation = () => {
       if (window.innerWidth < 640) {
@@ -66,19 +45,19 @@ const Section = () => {
     <div className="overflow-hidden">
       {/* Our Programs */}
       <div id="programs" className="mt-10 sm:mt-20 ">
-        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
+        <div className="text-4xl sm:text-5xl font-semibold text-center text-gray-800">
           Programs
         </div>
-        <p className="text-lg max-sm:px-5 sm:text-2xl text-gray-700 mt-5 sm:mt-10 text-center">
+        <p className="text-lg max-sm:px-5 sm:text-2xl text-gray-500 mt-5 sm:mt-10 text-center">
           We aim to develop leadership qualities and capabilities in young
           people with these programs
         </p>
         {/* programs internasional */}
-        <div className="mt-5">
+        <div className="mt-8">
           {/* main */}
           <div className="flex justify-center max-sm:flex-col sm:mt-14">
             {/* left */}
-            <div className="text-3xl text-center sm:text-6xl sm:text-start sm:w-[50%] text-gray-500 sm:pt-10 sm:pl-28 font-medium sm:font-normal leading-relaxed mb-5">
+            <div className="text-3xl text-center sm:text-6xl sm:text-start sm:w-[50%] text-gray-700 sm:text-gray-500 sm:pt-10 sm:pl-28 font-medium sm:font-normal leading-relaxed mb-5">
               <p>
                 <span className="max-sm:hidden">Our</span> Internasional{" "}
                 <span className="sm:hidden">Programs</span>
@@ -88,52 +67,39 @@ const Section = () => {
 
             {/* right */}
             <div
-              className="relative flex justify-center sm:w-[50%] h-[350px] sm:h-[500px] overflow-hidden"
+              className="sm:w-[50%] flex justify-center max-sm:px-16 "
               data-aos="fade-left"
             >
-              <div
-                className="flex w-[80%] gap-5 sm:gap-10 transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentIndexInternasional * 90}%)`,
-                }}
-              >
-                {internasionalImageList.map((list, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm "
-                    style={{ background: list.bgColor }}
-                  >
-                    <Image
-                      src={list.src}
-                      alt={list.alt}
-                      width={400}
-                      height={400}
-                    />
-                  </div>
-                ))}
-              </div>
+              <Carousel className="w-full max-w-2xl">
+                <CarouselContent>
+                  {internasionalImageList.map((list, index) => (
+                    <CarouselItem key={index}>
+                      <div
+                        className="rounded-xl cursor-pointer"
+                        style={{ backgroundColor: list.bgColor }}
+                      >
+                        <Card
+                          key={index}
+                          className="flex-shrink-0 sm:h-[600px] h-[300px]  flex justify-center items-center"
+                          style={{ background: list.bgColor }}
+                        >
+                          <CardContent>
+                            <Image
+                              src={list.src}
+                              alt={list.alt}
+                              width={400}
+                              height={400}
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
-          </div>
-          {/* button */}
-          <div className="mt-5 mr-5 flex sm:mr-36 justify-end gap-3 items-center sm:gap-5">
-            <button
-              className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-              onClick={() =>
-                prevSlide(setCurrentIndexInternasional, internasionalImageList)
-              }
-              disabled={isAnimating}
-            >
-              <i className="bx bx-chevron-left m-auto text-4xl" />
-            </button>
-            <button
-              className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-              onClick={() =>
-                nextSlide(setCurrentIndexInternasional, internasionalImageList)
-              }
-              disabled={isAnimating}
-            >
-              <i className="bx bx-chevron-right m-auto text-4xl" />
-            </button>
           </div>
         </div>
 
@@ -141,56 +107,47 @@ const Section = () => {
         <div className="mt-10">
           <div className="flex justify-center max-sm:flex-col sm:mt-24">
             {/* left */}
-            <div className="sm:hidden text-3xl text-center text-gray-500 font-medium mb-5">
+            <div className="sm:hidden text-3xl text-center text-gray-700 sm:text-gray-500 font-medium mb-5">
               Local Programs
             </div>
             {/* right */}
             <div
-              className="relative flex justify-center sm:w-[50%] h-[350px] sm:h-[500px] overflow-hidden"
+              className="sm:w-[50%] flex justify-center mt-5 max-sm:px-16 "
               data-aos="fade-right"
             >
-              <div
-                className="flex w-[80%] gap-5 sm:gap-10 transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentIndexLocal * 90}%)`,
-                }}
-              >
-                {localImageList.map((list, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm"
-                    style={{ background: list.bgColor }}
-                  >
-                    <Image
-                      src={list.src}
-                      alt={list.alt}
-                      width={400}
-                      height={400}
-                    />
-                  </div>
-                ))}
-              </div>
+              <Carousel className="w-full max-w-2xl">
+                <CarouselContent>
+                  {localImageList.map((list, index) => (
+                    <CarouselItem key={index}>
+                      <div
+                        className="rounded-xl cursor-pointer"
+                        style={{ backgroundColor: list.bgColor }}
+                      >
+                        <Card
+                          key={index}
+                          className="flex-shrink-0 sm:h-[600px] h-[300px]  flex justify-center items-center"
+                          style={{ background: list.bgColor }}
+                        >
+                          <CardContent>
+                            <Image
+                              src={list.src}
+                              alt={list.alt}
+                              width={400}
+                              height={400}
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
             <div className="sm:text-6xl sm:text-start sm:w-[50%] text-gray-500 sm:pt-10 sm:pl-28 font-normal leading-relaxed max-sm:hidden">
               Our Local Programs
             </div>
-          </div>
-          {/* button */}
-          <div className="mt-5 mr-5 flex justify-end sm:justify-start gap-3 sm:ml-36  items-center sm:gap-5">
-            <button
-              className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-              onClick={() => prevSlide(setCurrentIndexLocal, localImageList)}
-              disabled={isAnimating}
-            >
-              <i className="bx bx-chevron-left m-auto text-4xl"></i>
-            </button>
-            <button
-              className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-              onClick={() => nextSlide(setCurrentIndexLocal, localImageList)}
-              disabled={isAnimating}
-            >
-              <i className="bx bx-chevron-right m-auto text-4xl"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -198,49 +155,48 @@ const Section = () => {
       {/* event */}
       <div
         id="events"
-        className="flex justify-center items-center flex-col mt-10 sm:mt-20"
+        className="flex justify-center items-center flex-col mt-14 sm:mt-28"
       >
         {/* left */}
-        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
+        <div className="text-4xl sm:text-5xl font-semibold text-center text-gray-800">
           Events
         </div>
 
         {/* right */}
-        <div className="realative flex justify-center mt-5 sm:mt-10 sm:w-[50%] h-[350px] sm:h-[500px] overflow-hidden">
-          <div
-            className="flex w-[80%] gap-5 sm:gap-10 transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndexEvents * 90}%)`,
-            }}
-          >
-            {eventImageList.map((list, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 sm:h-[500px] h-full w-[90%] flex justify-center items-center p-10 rounded-sm "
-                style={{ background: list.bgColor }}
-              >
-                <Image src={list.src} alt={list.alt} width={400} height={400} />
-              </div>
-            ))}
-          </div>
+        <div
+          id="event-aos"
+          className="sm:w-[50%] flex justify-center max-sm:px-16 mt-5 sm:mt-10"
+        >
+          <Carousel className="w-full sm:max-w-3xl ">
+            <CarouselContent>
+              {eventImageList.map((list, index) => (
+                <CarouselItem key={index}>
+                  <div
+                    className="rounded-xl cursor-pointer"
+                    style={{ backgroundColor: list.bgColor }}
+                  >
+                    <Card
+                      key={index}
+                      className="flex-shrink-0 sm:h-[600px] h-[300px]  flex justify-center items-center"
+                      style={{ background: list.bgColor }}
+                    >
+                      <CardContent>
+                        <Image
+                          src={list.src}
+                          alt={list.alt}
+                          width={400}
+                          height={400}
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
-      </div>
-      {/* button */}
-      <div className="mt-5 mr-5 flex justify-end gap-3 items-center sm:gap-5">
-        <button
-          className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-          onClick={() => prevSlide(setCurrentIndexEvents, eventImageList)}
-          disabled={isAnimating}
-        >
-          <i className="bx bx-chevron-left m-auto text-4xl"></i>
-        </button>
-        <button
-          className="flex h-10 w-10 rounded-full bg-gray-400 text-white"
-          onClick={() => nextSlide(setCurrentIndexEvents, eventImageList)}
-          disabled={isAnimating}
-        >
-          <i className="bx bx-chevron-right m-auto text-4xl"></i>
-        </button>
       </div>
     </div>
   );

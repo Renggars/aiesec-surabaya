@@ -7,10 +7,10 @@ const SectionContact = () => {
       className="flex max-sm:flex-col mt-14 sm:justify-center sm:gap-10 sm:mt-20 sm:px-44"
     >
       <div className="sm:w-1/2 px-8">
-        <div className="text-4xl sm:text-5xl font-semibold sm:font-bold text-center">
+        <div className="text-4xl sm:text-5xl font-semibold text-center text-gray-800">
           Partner With Us?
         </div>
-        <div className="mx-auto h-[2px] sm:h-1 w-48 bg-primary mt-2 mb-7" />
+        <div className="mx-auto h-[2px] sm:h-1 w-48 bg-primaryColor mt-2 mb-7" />
         <p>
           AIESEC is a global platform for young people to explore and develop
           their leadership potential. We are a non-political, independent,
@@ -70,7 +70,7 @@ const SectionContact = () => {
               ></textarea>
             </div>
             <div className="w-full px-8 text-center">
-              <button className="bg-primary text-base font-semibold text-white bg-green-main py-1 px-9 rounded-md w-full sm:w-32 lg:w-60 xl:w-72 hover:opacity-80 hover:shadow-lg transition duration-500">
+              <button className="bg-primaryColor text-base font-semibold text-white bg-green-main py-1 px-9 rounded-md w-full sm:w-32 lg:w-60 xl:w-72 hover:opacity-80 hover:shadow-lg transition duration-500">
                 Submit
               </button>
             </div>

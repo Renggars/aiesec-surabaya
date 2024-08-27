@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-screen border border-red-500">
+    <div className="relative w-full h-screen">
       <div className="absolute w-full h-full opacity-30">
         <Image
           src={"/blog.webp"}
@@ -13,7 +13,7 @@ const Hero = () => {
           objectFit="cover"
         ></Image>
       </div>
-      <div className="absolute font-sans top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] sm:w-auto h-auto bg-primary flex justify-center items-center sm:p-5 p-3 rounded-sm">
+      <div className="absolute font-sans top-[25%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] sm:w-auto h-auto bg-primaryColor flex justify-center items-center sm:p-5 p-3 rounded-sm">
         <p className="text-white font-bold sm:text-5xl text-lg">
           Welcome to AIESEC Surabaya
         </p>
@@ -33,7 +33,7 @@ const Hero = () => {
       </div>
       <Link
         href={"https://aiesec.org/search"}
-        className="absolute font-sans top-[80%]  left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-auto bg-primary flex justify-center items-center py-2 px-3  text-white sm:text-2xl font-semibold rounded-md mt-5"
+        className="absolute font-sans top-[80%]  left-1/2 -translate-x-1/2 -translate-y-1/2 w-auto h-auto bg-primaryColor flex justify-center items-center py-2 px-3  text-white sm:text-2xl font-semibold rounded-md mt-5"
       >
         Let{"'"}s get started!
       </Link>

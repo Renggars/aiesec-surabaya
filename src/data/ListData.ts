@@ -119,3 +119,69 @@ export const eventImageList: eventImageList[] = [
     bgColor: "#f29702",
   },
 ];
+
+export type blogList = {
+  src: string;
+  alt: string;
+  title: string;
+  date: string;
+  desc: string;
+};
+
+export const blogList: blogList[] = [
+  {
+    src: "/blog/upnblog.webp",
+    alt: "upnBlogImage",
+    title: ` Supporting Health and Well-being with Local Project by AIESEC in
+                UPNVJ’s Vitation: Stay Healthy Together, With You Wellness`,
+    date: `by AIESEC in UPNVJ | Aug 23, 2024 | Local Project, Youth`,
+    desc: `Jakarta, 23 August 2024 - Hi, Change Makers! Have you ever
+                participated in a volunteering project that not only contributes
+                to the surrounding environment, but also offers training,
+                international networking, and personal development focus? Let’s
+                dive into the volunteer experience of “Vitation:...`,
+  },
+  {
+    src: "/blog/2.webp",
+    alt: "upnBlogImage",
+    title: `Kesuksesan AIESEC Future Leaders di AIESEC in Surabaya: “Sesi
+                Induksi yang Berdayakan Lebih dari 160 Mahasiswa dalam
+                Pengembangan Kepemimpinan”`,
+    date: ` by AIESEC in Surabaya | Aug 12, 2024 | AIESEC Future Leaders,
+                Leadership, Press Release, Youth`,
+    desc: `Surabaya, 12 Agustus 2024 - AIESEC Future Leaders (AFL) dari
+                AIESEC in Surabaya berhasil menyelesaikan rangkaian program
+                leadership development (pengembangan kepemimpinan), tepatnya
+                sesi induction (induksi) bersama lebih dari 160 peserta di
+                berbagai universitas di...`,
+  },
+  {
+    src: "/blog/3.jpeg",
+    alt: "upnBlogImage",
+    title: `Volunteering in Turkey with AIESEC: Maira’s Inspiring Global
+                Adventure`,
+    date: `by AIESEC in UPNVJ | Aug 17, 2024 | Exchange Stories, Global
+                Volunteer, Leadership, Youth`,
+    desc: `Volunteering in Turkey with AIESEC: Maira’s Inspiring Global
+                Adventure Jakarta, 17 Agustus 2024 - Have you ever wondered what{" "}
+                ${`it's`} like to volunteer? To dedicate your time and energy to
+                a cause bigger than yourself? Volunteering can be a profoundly
+                rewarding experience, offering opportunities for personal
+                growth, skill development, and making a tangible impact on
+                society. What about...`,
+  },
+  {
+    src: "/blog/4.webp",
+    alt: "upnBlogImage",
+    title: `Press Release of Impact Circle 6.0 “From Burnout to Balance:
+                Synchronizing Wellness For Optimal Performance and Growth” by
+                AIESEC in UPNVJ`,
+    date: ` by AIESEC in UPNVJ | Aug 10, 2024 | Impact Circle, Press
+                Release, Youth`,
+    desc: `   Jakarta, 10 Agustus 2024 - In this summer, AIESEC in UPNVJ
+                successfully held a hybrid Impact Circle. This year marked the
+                6th edition of AIESEC in UPNVJ’s Impact Circle, themed “Impact
+                Circle 6.0: From BtoB”. The event provided a platform for young
+                individuals to expand their understanding of mental...`,
+  },
+];
