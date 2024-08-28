@@ -44,7 +44,7 @@ const Navbar = () => {
     <div className="relative">
       <header
         id="header"
-        className="absolute w-full sm:py-5 py-3 sm:px-10 px-5 flex justify-between items-center border border-b-1 border-gray-300 sm:h-28 h-16 z-40 bg-white top-0"
+        className="absolute w-full sm:py-5 py-3 sm:px-16 px-5 flex justify-between items-center border border-b-1 border-gray-300 sm:h-28 h-16 z-40 bg-white top-0"
       >
         <nav className="flex w-full relative">
           {/* logo desktop */}
@@ -63,7 +63,7 @@ const Navbar = () => {
             {navLinks.map((link: navLinks) => (
               <a
                 key={link.href}
-                className="text-gray hover:text-primary px-5 transition-all cursor-pointer"
+                className="text-gray font-medium hover:text-primaryColor px-8 transition-all cursor-pointer text-lg"
                 href={link.href} // Masih menyertakan href untuk SEO
                 onClick={(e) => handleScroll(e, link.href.slice(1))} // Menggunakan slice(1) untuk menghapus '#' dari href
               >
@@ -71,7 +71,7 @@ const Navbar = () => {
               </a>
             ))}
             <div
-              className="hover:text-primary transition-all cursor-pointer"
+              className="text-gray font-medium text-lg  hover:text-primary transition-all cursor-pointer pl-8"
               onClick={() => setIsOpenMore(!isOpenMore)}
             >
               More
