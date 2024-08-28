@@ -63,7 +63,7 @@ const Navbar = () => {
             {navLinks.map((link: navLinks) => (
               <a
                 key={link.href}
-                className="text-gray font-medium hover:text-primaryColor px-8 transition-all cursor-pointer text-lg"
+                className="text-grayColor font-medium hover:text-primaryColor px-8 transition-all cursor-pointer text-lg"
                 href={link.href} // Masih menyertakan href untuk SEO
                 onClick={(e) => handleScroll(e, link.href.slice(1))} // Menggunakan slice(1) untuk menghapus '#' dari href
               >
